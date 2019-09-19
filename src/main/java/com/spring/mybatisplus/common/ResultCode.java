@@ -1,4 +1,4 @@
-package com.spring.mybatisplus.utils;
+package com.spring.mybatisplus.common;
 
 /**
  * @Description

@@ -1,7 +1,7 @@
 package com.spring.mybatisplus.controller;
 
-import com.spring.mybatisplus.utils.ResultCode;
-import com.spring.mybatisplus.utils.ResultJson;
+import com.spring.mybatisplus.common.ResultCode;
+import com.spring.mybatisplus.common.ResultJson;
 import org.apache.commons.io.FileUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;

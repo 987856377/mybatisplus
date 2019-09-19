@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/utils/LogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +101,7 @@
       <updated>1568789307906</updated>
       <workItem from="1568789309236" duration="3607000" />
       <workItem from="1568795617970" duration="6320000" />
-      <workItem from="1568855784171" duration="13363000" />
+      <workItem from="1568855784171" duration="13450000" />
     </task>
     <task id="LOCAL-00001" summary="制定统一的返回格式信息和返回代码, 实现多文件上传下载">
       <created>1568865861799</created>
@@ -114,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568865861799</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="添加日志切面, 记录调用controller方法时的url, 入参, 出参, 执行时间">
+      <created>1568876230627</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568876230627</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +138,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="制定统一的返回格式信息和返回代码, 实现多文件上传下载" />
-    <option name="LAST_COMMIT_MESSAGE" value="制定统一的返回格式信息和返回代码, 实现多文件上传下载" />
+    <MESSAGE value="添加日志切面, 记录调用controller方法时的url, 入参, 出参, 执行时间" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加日志切面, 记录调用controller方法时的url, 入参, 出参, 执行时间" />
   </component>
 </project>

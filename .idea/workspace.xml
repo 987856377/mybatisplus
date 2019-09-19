@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="" />
+    <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/MybatisplusApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/MybatisplusApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/configuration/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/configuration/MybatisPlusConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +23,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="Mybatis XML File" />
       </list>
     </option>
   </component>
@@ -53,11 +64,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ZbNewApp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -85,6 +97,10 @@
       </method>
     </configuration>
   </component>
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+    <option name="showProfilesPanel" value="false" />
+  </component>
   <component name="SshConsoleOptionsProvider">
     <option name="myEncoding" value="UTF-8" />
     <option name="myConnectionType" value="NONE" />
@@ -103,6 +119,12 @@
       <workItem from="1568795617970" duration="6320000" />
       <workItem from="1568855784171" duration="13450000" />
       <workItem from="1568878585441" duration="426000" />
+      <workItem from="1568879921829" duration="72000" />
+      <workItem from="1568883310760" duration="34000" />
+      <workItem from="1568883421977" duration="112000" />
+      <workItem from="1568884066643" duration="2123000" />
+      <workItem from="1568886206799" duration="486000" />
+      <workItem from="1568886716199" duration="579000" />
     </task>
     <task id="LOCAL-00001" summary="制定统一的返回格式信息和返回代码, 实现多文件上传下载">
       <created>1568865861799</created>
@@ -139,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568878996529</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="删除无效插件">
+      <created>1568879978950</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568879978950</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +192,7 @@
     <MESSAGE value="添加日志切面, 记录调用controller方法时的url, 入参, 出参, 执行时间" />
     <MESSAGE value="添加日志切面" />
     <MESSAGE value="将返回的代码和和格式放置到common中" />
-    <option name="LAST_COMMIT_MESSAGE" value="将返回的代码和和格式放置到common中" />
+    <MESSAGE value="删除无效插件" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除无效插件" />
   </component>
 </project>

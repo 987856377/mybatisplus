@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.spring.mybatisplus.mapper.UserMapper;
 import com.spring.mybatisplus.model.User;
 import org.springframework.stereotype.Service;
-
 /**
  * @Description
  * @Project mybatisplus

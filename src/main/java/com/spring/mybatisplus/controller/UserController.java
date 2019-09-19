@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.spring.mybatisplus.model.User;
 import com.spring.mybatisplus.service.UserService;
+import com.spring.mybatisplus.utils.ResultCode;
+import com.spring.mybatisplus.utils.ResultJson;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -39,8 +41,11 @@ public class UserController {
      * @Date 2019/9/18 18:07
      */
     @RequestMapping("saveOrUpdateUser")
-    public Boolean saveOrUpdateUser(@RequestBody User user){
-        return userService.saveOrUpdate(user);
+    public ResultJson saveOrUpdateUser(@RequestBody User user){
+        if (user==null){
+            return ResultJson.failure(ResultCode.NOT_ACCEPTABLE);
+        }
+        return ResultJson.success(userService.saveOrUpdate(user));
     }
 
     /*/*
@@ -57,8 +62,11 @@ public class UserController {
      * @Date 2019/9/18 18:06
      */
     @RequestMapping("getUserById")
-    public User getUserById(@RequestBody Object id){
-        return userService.getById((Serializable) id);
+    public ResultJson<User> getUserById(@RequestBody Object id){
+        if (id.equals(null) || id == ""){
+            return ResultJson.failure(ResultCode.BAD_REQUEST);
+        }
+        return ResultJson.success(userService.getById((Serializable) id));
     }
 
     /*/*
@@ -73,8 +81,11 @@ public class UserController {
      * @Date 2019/9/18 18:05
      */
     @RequestMapping("deleteUser")
-    public Boolean deleteUser(@RequestBody Object id){
-        return userService.removeById((Serializable) id);
+    public ResultJson deleteUser(@RequestBody Object id){
+        if (id.equals(null) || id == ""){
+            return ResultJson.failure(ResultCode.BAD_REQUEST);
+        }
+        return ResultJson.success(userService.removeById((Serializable) id));
     }
 
     /*/*
@@ -87,8 +98,8 @@ public class UserController {
      * @Date 2019/9/18 18:05
      */
     @RequestMapping("getUserList")
-    public List<User> getUserList(){
-        return userService.list(null);
+    public ResultJson<List<User>> getUserList(){
+        return ResultJson.success(userService.list(null));
     }
 
 
@@ -105,7 +116,7 @@ public class UserController {
      * @Date 2019/9/18 18:04
      */
     @RequestMapping("getUserPage")
-    public IPage<User> getUserPage(@RequestBody Page<User> page){
-        return userService.page(page);
+    public ResultJson<IPage<User>> getUserPage(@RequestBody Page<User> page){
+        return ResultJson.success(userService.page(page));
     }
 }

@@ -1,9 +1,9 @@
 package com.spring.mybatisplus.controller;
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
-import com.baomidou.mybatisplus.core.conditions.segments.MergeSegments;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.spring.mybatisplus.mapper.UserMapper;
 import com.spring.mybatisplus.model.User;
 import com.spring.mybatisplus.service.UserService;
 import com.spring.mybatisplus.common.ResultCode;
@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.List;
+
+import static com.spring.mybatisplus.common.ResultJson.success;
 
 /**
  * @Description
@@ -47,7 +49,7 @@ public class UserController {
         if (user==null){
             return ResultJson.failure(ResultCode.NOT_ACCEPTABLE);
         }
-        return ResultJson.success(userService.saveOrUpdate(user));
+        return success(userService.saveOrUpdate(user));
     }
 
     /*/*
@@ -68,7 +70,7 @@ public class UserController {
         if (id.equals(null) || id == ""){
             return ResultJson.failure(ResultCode.BAD_REQUEST);
         }
-        return ResultJson.success(userService.getById((Serializable) id));
+        return success(userService.getById((Serializable) id));
     }
 
     /*/*
@@ -82,12 +84,36 @@ public class UserController {
      * @Creed: Talk is cheap,show me the code
      * @Date 2019/9/18 18:05
      */
-    @RequestMapping("deleteUser")
-    public ResultJson deleteUser(@RequestBody Object id){
+    @RequestMapping("deleteUserById")
+    public ResultJson deleteUserById(@RequestBody Object id){
         if (id.equals(null) || id == ""){
             return ResultJson.failure(ResultCode.BAD_REQUEST);
         }
-        return ResultJson.success(userService.removeById((Serializable) id));
+        return success(userService.removeById((Serializable) id));
+    }
+
+
+    /*/*
+     * @Description
+     * @param null
+        {
+            "username":"admin"
+        }
+     * @Return
+     * @Author XuZhenkui
+     * @Creed: Talk is cheap,show me the code
+     * @Date 2019/9/22 1:01
+     */
+    @Resource
+    private UserMapper userMapper;
+    @RequestMapping("getUserByUsername")
+    public ResultJson getUserByUsername(@RequestBody User user){
+        if (user == null){
+            return ResultJson.failure(ResultCode.BAD_REQUEST);
+        }
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.lambda().eq(User::getUsername,user.getUsername());
+        return ResultJson.success(userMapper.selectList(wrapper));
     }
 
     /*/*
@@ -101,7 +127,7 @@ public class UserController {
      */
     @RequestMapping("getUserList")
     public ResultJson<List<User>> getUserList(){
-        return ResultJson.success(userService.list(null));
+        return success(userService.list(null));
     }
 
 
@@ -119,6 +145,6 @@ public class UserController {
      */
     @RequestMapping("getUserPage")
     public ResultJson<IPage<User>> getUserPage(@RequestBody Page<User> page){
-        return ResultJson.success(userService.page(page));
+        return success(userService.page(page));
     }
 }

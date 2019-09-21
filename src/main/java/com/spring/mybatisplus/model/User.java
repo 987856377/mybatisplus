@@ -1,5 +1,8 @@
 package com.spring.mybatisplus.model;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 
@@ -14,9 +17,13 @@ import java.io.Serializable;
  */
 @TableName("user")
 public class User extends Model<User> implements Serializable {
+    @TableId(value = "id", type = IdType.AUTO)
     private long id;
+    @TableField(value = "username")
     private String username;
+    @TableField(value = "password")
     private String password;
+    @TableField(value = "age")
     private int age;
 
     public User(){}

@@ -1,9 +1,9 @@
 package com.spring.mybatisplus.configuration;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 /**
@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Configuration;
  * @Author xuzhenkui
  * @Date 2019/9/18 14:54
  */
+@EnableTransactionManagement
 @Configuration
-@MapperScan(basePackages = {"com.spring.mybatisplus.mapper"}) //扫描mapper接口
 public class MybatisPlusConfig {
     /*
      * 分页插件，自动识别数据库类型

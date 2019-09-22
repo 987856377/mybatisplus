@@ -18,13 +18,13 @@ import java.io.Serializable;
 @TableName("user")
 public class User extends Model<User> implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
-    private long id;
+    private Long id;
     @TableField(value = "username")
     private String username;
     @TableField(value = "password")
     private String password;
     @TableField(value = "age")
-    private int age;
+    private Integer age;
 
     public User(){}
 

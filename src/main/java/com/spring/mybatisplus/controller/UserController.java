@@ -3,13 +3,13 @@ package com.spring.mybatisplus.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.spring.mybatisplus.mapper.UserMapper;
 import com.spring.mybatisplus.model.User;
 import com.spring.mybatisplus.service.UserService;
 import com.spring.mybatisplus.common.ResultCode;
 import com.spring.mybatisplus.common.ResultJson;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -104,16 +104,22 @@ public class UserController {
      * @Creed: Talk is cheap,show me the code
      * @Date 2019/9/22 1:01
      */
-    @Resource
-    private UserMapper userMapper;
-    @RequestMapping("getUserByUsername")
-    public ResultJson getUserByUsername(@RequestBody User user){
+    @RequestMapping("getUsersByUsername")
+    public ResultJson getUsersByUsername(@RequestBody User user){
         if (user == null){
             return ResultJson.failure(ResultCode.BAD_REQUEST);
         }
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         wrapper.lambda().eq(User::getUsername,user.getUsername());
-        return ResultJson.success(userMapper.selectList(wrapper));
+        return ResultJson.success(userService.selectList(wrapper));
+    }
+
+    @RequestMapping("getByUsername")
+    public ResultJson getByUsername(@RequestParam("username") String username){
+        if (username == null){
+            return ResultJson.failure(ResultCode.BAD_REQUEST);
+        }
+        return ResultJson.success(userService.getByUsername(username));
     }
 
     /*/*

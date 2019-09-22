@@ -17,6 +17,10 @@
             </where>
     </select>
 
+    <select id="getUserByPage" parameterType="Integer" resultMap="userMap">
+        select * from user limit #{offset}, #{pageSize}
+    </select>
+
     <select id="getByWrapper" parameterType="String" resultMap="userMap">
         select * from user ${ew.customSqlSegment}
     </select>

@@ -22,6 +22,9 @@ public interface UserMapper extends BaseMapper<User> {
 //    @Select("select * from user where username = #{username}")
     public List<User> getByUsername(@Param("username") String username);
 
+//    @Select("select * from user limit #{offset}, #{pageSize}")
+    public List<User> getUserByPage(@Param("offset") int offset, @Param("pageSize") int pageSize);
+
 //    自定义SQL查询: 使用Wrapper
     public List<User> getByWrapper(@Param(Constants.WRAPPER)Wrapper wrapper);
 }

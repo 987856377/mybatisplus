@@ -14,9 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.io.Serializable;
-import java.util.List;
-
-import static com.spring.mybatisplus.common.ResultJson.success;
 
 /**
  * @Description
@@ -49,7 +46,10 @@ public class UserController {
         if (user==null){
             return ResultJson.failure(ResultCode.NOT_ACCEPTABLE);
         }
-        return success(userService.saveOrUpdate(user));
+        if (user.getId() == null){
+            return ResultJson.success(userService.save(user));
+        }
+        return ResultJson.success(userService.saveOrUpdate(user));
     }
 
     /*/*
@@ -66,11 +66,11 @@ public class UserController {
      * @Date 2019/9/18 18:06
      */
     @RequestMapping("getUserById")
-    public ResultJson<User> getUserById(@RequestBody Object id){
-        if (id.equals(null) || id == ""){
+    public ResultJson getUserById(@RequestBody Object id){
+        if (id == null){
             return ResultJson.failure(ResultCode.BAD_REQUEST);
         }
-        return success(userService.getById((Serializable) id));
+        return ResultJson.success(userService.getById((Serializable) id));
     }
 
     /*/*
@@ -86,10 +86,10 @@ public class UserController {
      */
     @RequestMapping("deleteUserById")
     public ResultJson deleteUserById(@RequestBody Object id){
-        if (id.equals(null) || id == ""){
+        if (id == null){
             return ResultJson.failure(ResultCode.BAD_REQUEST);
         }
-        return success(userService.removeById((Serializable) id));
+        return ResultJson.success(userService.removeById((Serializable) id));
     }
 
 
@@ -114,22 +114,31 @@ public class UserController {
         return ResultJson.success(userService.selectList(wrapper));
     }
 
+    @RequestMapping("getUserByPage")
+    public ResultJson getUserByPage(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum, @RequestParam(value = "pageSize", defaultValue = "10") int pageSize){
+        if (pageNum <= 0 || pageSize <= 0){
+            pageNum = 1;
+            pageSize = 10;
+        }
+        int offset = (pageNum-1)*pageSize;
+        return ResultJson.success(userService.getUserByPage(offset,pageSize));
+    }
+
     @RequestMapping("getByUsername")
-    public ResultJson getByUsername(@RequestParam("username") String username){
-        if (username == null){
+    public ResultJson getByUsername(@RequestBody User user){
+        if (user == null){
             return ResultJson.failure(ResultCode.BAD_REQUEST);
         }
-        return ResultJson.success(userService.getByUsername(username));
+        return ResultJson.success(userService.getByUsername(user.getUsername()));
     }
 
     @RequestMapping("getByWrapper")
-    public ResultJson getByWrapper(@RequestParam("username") String username){
-        if (username == null){
+    public ResultJson getByWrapper(@RequestBody User user){
+        if (user == null){
             return ResultJson.failure(ResultCode.BAD_REQUEST);
         }
-        System.out.println(username);
         QueryWrapper<User> wrapper = new QueryWrapper<>();
-        wrapper.lambda().eq(User::getUsername,username);
+        wrapper.lambda().eq(User::getUsername,user.getUsername());
         return ResultJson.success(userService.getByWrapper(wrapper));
     }
 
@@ -143,8 +152,8 @@ public class UserController {
      * @Date 2019/9/18 18:05
      */
     @RequestMapping("getUserList")
-    public ResultJson<List<User>> getUserList(){
-        return success(userService.list(null));
+    public ResultJson getUserList(){
+        return ResultJson.success(userService.list(null));
     }
 
 
@@ -162,6 +171,6 @@ public class UserController {
      */
     @RequestMapping("getUserPage")
     public ResultJson<IPage<User>> getUserPage(@RequestBody Page<User> page){
-        return success(userService.page(page));
+        return ResultJson.success(userService.page(page));
     }
 }

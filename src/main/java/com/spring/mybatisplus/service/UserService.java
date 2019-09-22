@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.spring.mybatisplus.mapper.UserMapper;
 import com.spring.mybatisplus.model.User;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -22,15 +21,19 @@ public class UserService extends ServiceImpl<UserMapper,User> {
     @Resource
     private UserMapper userMapper;
 
+    public List<User> selectList(Wrapper wrapper){
+        return userMapper.selectList(wrapper);
+    }
+
     public List<User> getByUsername(String username){
         return userMapper.getByUsername(username);
     }
 
-    public List<User> getByWrapper(Wrapper wrapper){
-        return userMapper.getByWrapper(wrapper);
+    public List<User> getUserByPage(int offset, int pageSize){
+        return userMapper.getUserByPage(offset,pageSize);
     }
 
-    public List<User> selectList(Wrapper wrapper){
-        return userMapper.selectList(wrapper);
+    public List<User> getByWrapper(Wrapper wrapper){
+        return userMapper.getByWrapper(wrapper);
     }
 }

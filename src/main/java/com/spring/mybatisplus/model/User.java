@@ -35,11 +35,11 @@ public class User extends Model<User> implements Serializable {
         this.age = age;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -59,11 +59,11 @@ public class User extends Model<User> implements Serializable {
         this.password = password;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

@@ -28,8 +28,10 @@ public class UserController {
     private UserService userService;
 
     /*/*
-     * @Description
+     * @Description 提交 json 格式的参数.
+     * 不传id参数为新建,id自增; 传id参数为新建或修改, id数据不存在,则新建,反之则修改
      * @param user
+     *
         {
             "id":"53509",
             "username":"frank",
@@ -53,7 +55,7 @@ public class UserController {
     }
 
     /*/*
-     * @Description
+     * @Description 提交 json 格式的参数
      * @param id
      *
         {
@@ -74,7 +76,7 @@ public class UserController {
     }
 
     /*/*
-     * @Description
+     * @Description 提交 json 格式的参数
      * @param id
         {
 	        "id":1223
@@ -94,7 +96,7 @@ public class UserController {
 
 
     /*/*
-     * @Description
+     * @Description 提交 json 格式的参数
      * @param null
         {
             "username":"admin"
@@ -114,16 +116,17 @@ public class UserController {
         return ResultJson.success(userService.selectList(wrapper));
     }
 
-    @RequestMapping("getUserByPage")
-    public ResultJson getUserByPage(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum, @RequestParam(value = "pageSize", defaultValue = "10") int pageSize){
-        if (pageNum <= 0 || pageSize <= 0){
-            pageNum = 1;
-            pageSize = 10;
+    /*/*
+     * @Description 提交 json 格式的参数
+     * @param null
+        {
+            "username":"admin"
         }
-        int offset = (pageNum-1)*pageSize;
-        return ResultJson.success(userService.getUserByPage(offset,pageSize));
-    }
-
+     * @Return
+     * @Author XuZhenkui
+     * @Creed: Talk is cheap,show me the code
+     * @Date 2019/9/22 1:01
+     */
     @RequestMapping("getByUsername")
     public ResultJson getByUsername(@RequestBody User user){
         if (user == null){
@@ -132,6 +135,17 @@ public class UserController {
         return ResultJson.success(userService.getByUsername(user.getUsername()));
     }
 
+    /*/*
+     * @Description 提交 json 格式的参数
+     * @param null
+        {
+            "username":"admin"
+        }
+     * @Return
+     * @Author XuZhenkui
+     * @Creed: Talk is cheap,show me the code
+     * @Date 2019/9/22 1:01
+     */
     @RequestMapping("getByWrapper")
     public ResultJson getByWrapper(@RequestBody User user){
         if (user == null){
@@ -143,22 +157,45 @@ public class UserController {
     }
 
     /*/*
-     * @Description
+     * @Description 提交 json 格式的参数
      * @param
-     * 
+     *
      * @Return java.util.List<com.spring.mybatisplus.model.User>
      * @Author XuZhenkui
      * @Creed: Talk is cheap,show me the code
      * @Date 2019/9/18 18:05
      */
+
     @RequestMapping("getUserList")
     public ResultJson getUserList(){
         return ResultJson.success(userService.list(null));
     }
 
+    /*/*
+     * @Description 提交 form 表单格式的参数
+     * @param pageNum
+     * @param pageSize
+        {
+            "pageNum": 1,
+            "pageSize": 5
+        }
+     * @Return com.spring.mybatisplus.common.ResultJson
+     * @Author XuZhenkui
+     * @Creed: Talk is cheap,show me the code
+     * @Date 2019/9/22 23:26
+     */
+    @RequestMapping("getUserByPage")
+    public ResultJson getUserByPage(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum, @RequestParam(value = "pageSize", defaultValue = "10") int pageSize){
+        if (pageNum <= 0 || pageSize <= 0){
+            pageNum = 1;
+            pageSize = 10;
+        }
+        int offset = (pageNum-1)*pageSize;
+        return ResultJson.success(userService.getUserByPage(offset,pageSize));
+    }
 
     /*/*
-     * @Description
+     * @Description 提交 json 格式的参数
      * @param page
         {
             "current": 1,

@@ -1,7 +1,6 @@
 package com.spring.mybatisplus.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.spring.mybatisplus.model.User;
 import com.spring.mybatisplus.service.UserService;
@@ -207,7 +206,7 @@ public class UserController {
      * @Date 2019/9/18 18:04
      */
     @RequestMapping("getUserPage")
-    public ResultJson<IPage<User>> getUserPage(@RequestBody Page<User> page){
+    public ResultJson getUserPage(@RequestBody Page<User> page){
         return ResultJson.success(userService.page(page));
     }
 }

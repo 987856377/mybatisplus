@@ -17,14 +17,17 @@ import java.util.List;
  * @Author xuzhenkui
  * @Date 2019/9/18 15:00
  */
-@Service
-@Transactional
+@Service(value = "userService")
 public class UserService extends ServiceImpl<UserMapper,User> {
     @Resource
     private UserMapper userMapper;
 
     public List<User> getByUsername(String username){
         return userMapper.getByUsername(username);
+    }
+
+    public List<User> getByWrapper(Wrapper wrapper){
+        return userMapper.getByWrapper(wrapper);
     }
 
     public List<User> selectList(Wrapper wrapper){

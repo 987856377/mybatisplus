@@ -122,6 +122,17 @@ public class UserController {
         return ResultJson.success(userService.getByUsername(username));
     }
 
+    @RequestMapping("getByWrapper")
+    public ResultJson getByWrapper(@RequestParam("username") String username){
+        if (username == null){
+            return ResultJson.failure(ResultCode.BAD_REQUEST);
+        }
+        System.out.println(username);
+        QueryWrapper<User> wrapper = new QueryWrapper<>();
+        wrapper.lambda().eq(User::getUsername,username);
+        return ResultJson.success(userService.getByWrapper(wrapper));
+    }
+
     /*/*
      * @Description
      * @param

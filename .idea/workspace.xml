@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="删除无效依赖">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__Arquillian_JUnit_Release.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+    <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="实现自定义SQL查询: 使用Wrapper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/configuration/MybatisPlusConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/configuration/MybatisPlusConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -193,7 +189,7 @@
       <workItem from="1568886716199" duration="779000" />
       <workItem from="1568941841232" duration="6673000" />
       <workItem from="1569074914598" duration="10681000" />
-      <workItem from="1569117658273" duration="2585000" />
+      <workItem from="1569117658273" duration="3928000" />
     </task>
     <task id="LOCAL-00001" summary="制定统一的返回格式信息和返回代码, 实现多文件上传下载">
       <created>1568865861799</created>
@@ -251,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569085625450</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="实现自定义SQL方式查询:1. 使用注解方式; 2. 使用xml方式">
+      <created>1569120352179</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1569120352179</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +281,7 @@
     <MESSAGE value="删除无效插件" />
     <MESSAGE value="删除无效依赖" />
     <MESSAGE value="添加可用注解, 添加条件查询接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加可用注解, 添加条件查询接口" />
+    <MESSAGE value="实现自定义SQL方式查询:1. 使用注解方式; 2. 使用xml方式" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现自定义SQL方式查询:1. 使用注解方式; 2. 使用xml方式" />
   </component>
 </project>

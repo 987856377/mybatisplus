@@ -16,4 +16,8 @@
                 </if>
             </where>
     </select>
+
+    <select id="getByWrapper" parameterType="String" resultMap="userMap">
+        select * from user ${ew.customSqlSegment}
+    </select>
 </mapper>

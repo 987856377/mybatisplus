@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="添加 SQL 分页, 修改saveOrUpdate方法, 修改 User 成员变量的类型">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" afterDir="false" />
-    </list>
+    <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +193,7 @@
       <workItem from="1568941841232" duration="6673000" />
       <workItem from="1569074914598" duration="10681000" />
       <workItem from="1569117658273" duration="6214000" />
-      <workItem from="1569161502314" duration="4962000" />
+      <workItem from="1569161502314" duration="5137000" />
     </task>
     <task id="LOCAL-00001" summary="制定统一的返回格式信息和返回代码, 实现多文件上传下载">
       <created>1568865861799</created>
@@ -296,7 +293,21 @@
       <option name="project" value="LOCAL" />
       <updated>1569165866133</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="添加注释">
+      <created>1569166570246</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1569166570246</updated>
+    </task>
+    <task id="LOCAL-00016" summary="删除无效声明">
+      <created>1569166711297</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569166711297</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +338,8 @@
     <MESSAGE value="实现自定义SQL查询: 使用Wrapper" />
     <MESSAGE value="添加建库,建表 SQL 文件" />
     <MESSAGE value="添加 SQL 分页, 修改saveOrUpdate方法, 修改 User 成员变量的类型" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加 SQL 分页, 修改saveOrUpdate方法, 修改 User 成员变量的类型" />
+    <MESSAGE value="添加注释" />
+    <MESSAGE value="删除无效声明" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除无效声明" />
   </component>
 </project>

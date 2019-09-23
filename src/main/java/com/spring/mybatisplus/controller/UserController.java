@@ -171,7 +171,7 @@ public class UserController {
     }
 
     /*/*
-     * @Description 提交 form 表单格式的参数
+     * @Description 提交 form 表单格式的参数, 自定义实现sql分页
      * @param pageNum
      * @param pageSize
         {
@@ -194,7 +194,7 @@ public class UserController {
     }
 
     /*/*
-     * @Description 提交 json 格式的参数
+     * @Description 提交 json 格式的参数,mybatis 内置分页方式
      * @param page
         {
             "current": 1,

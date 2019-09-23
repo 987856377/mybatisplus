@@ -1,6 +1,7 @@
 package com.spring.mybatisplus.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.spring.mybatisplus.model.User;
 import com.spring.mybatisplus.service.UserService;
@@ -153,6 +154,29 @@ public class UserController {
         QueryWrapper<User> wrapper = new QueryWrapper<>();
         wrapper.lambda().eq(User::getUsername,user.getUsername());
         return ResultJson.success(userService.getByWrapper(wrapper));
+    }
+
+    /*/*
+     * @Description 提交 json 格式的参数
+     * @param null
+        {
+            "id":"53519",
+            "password":"123456"
+        }
+     * @Return
+     * @Author XuZhenkui
+     * @Creed: Talk is cheap,show me the code
+     * @Date 2019/9/22 1:01
+     */
+    @RequestMapping("updatePassword")
+    public ResultJson updatePassword(@RequestBody User user){
+        if (user == null){
+            return ResultJson.failure(ResultCode.BAD_REQUEST);
+        }
+        UpdateWrapper<User> wrapper = new UpdateWrapper<>();
+        wrapper.lambda().set(User::getPassword,user.getPassword());
+        wrapper.lambda().eq(User::getId,user.getId());
+        return ResultJson.success(userService.update(wrapper));
     }
 
     /*/*

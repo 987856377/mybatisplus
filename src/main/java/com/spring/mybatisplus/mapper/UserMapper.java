@@ -26,6 +26,7 @@ public interface UserMapper extends BaseMapper<User> {
     public List<User> getUserByPage(@Param("offset") int offset, @Param("pageSize") int pageSize);
 
 //    自定义SQL查询: 使用Wrapper
+//    @Select("select * from user ${ew.customSqlSegment}")
     public List<User> getByWrapper(@Param(Constants.WRAPPER)Wrapper wrapper);
 }
 

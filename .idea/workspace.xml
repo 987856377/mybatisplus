@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__Arquillian_JUnit_Release.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__Arquillian_JUnit_Release.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +200,9 @@
       <workItem from="1569117658273" duration="6214000" />
       <workItem from="1569161502314" duration="5137000" />
       <workItem from="1569200794777" duration="227000" />
-      <workItem from="1569203797749" duration="2623000" />
+      <workItem from="1569203797749" duration="2931000" />
+      <workItem from="1569287124413" duration="8000" />
+      <workItem from="1569734746983" duration="1985000" />
     </task>
     <task id="LOCAL-00001" summary="制定统一的返回格式信息和返回代码, 实现多文件上传下载">
       <created>1568865861799</created>
@@ -320,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569200955402</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="添加更新方法接口">
+      <created>1569206691284</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1569206691284</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +363,7 @@
     <MESSAGE value="添加 SQL 分页, 修改saveOrUpdate方法, 修改 User 成员变量的类型" />
     <MESSAGE value="删除无效声明" />
     <MESSAGE value="添加注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加注释" />
+    <MESSAGE value="添加更新方法接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加更新方法接口" />
   </component>
 </project>

@@ -3,6 +3,7 @@ package com.spring.mybatisplus.controller;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.spring.mybatisplus.annotation.Auth;
 import com.spring.mybatisplus.model.User;
 import com.spring.mybatisplus.service.UserService;
 import com.spring.mybatisplus.common.ResultCode;
@@ -195,7 +196,7 @@ public class UserController {
     }
 
     /*/*
-     * @Description 提交 form 表单格式的参数, 自定义实现sql分页
+     * @Description 提交 json 表单格式的参数, 自定义实现sql分页
      * @param pageNum
      * @param pageSize
         {
@@ -207,14 +208,15 @@ public class UserController {
      * @Creed: Talk is cheap,show me the code
      * @Date 2019/9/22 23:26
      */
+    @Auth(roles = {"USER"})
     @RequestMapping("getUserByPage")
-    public ResultJson getUserByPage(@RequestParam(value = "pageNum", defaultValue = "1") int pageNum, @RequestParam(value = "pageSize", defaultValue = "10") int pageSize){
-        if (pageNum <= 0 || pageSize <= 0){
-            pageNum = 1;
-            pageSize = 10;
+    public ResultJson getUserByPage(@RequestBody Page<User> page){
+        if (page.getCurrent() <=0 || page.getSize() <= 0){
+            page.setCurrent(1);
+            page.setSize(5);
         }
-        int offset = (pageNum-1)*pageSize;
-        return ResultJson.success(userService.getUserByPage(offset,pageSize));
+        long offset = (page.getCurrent()-1)*page.getSize();
+        return ResultJson.success(userService.getUserByPage(offset,page.getSize()));
     }
 
     /*/*
@@ -229,6 +231,7 @@ public class UserController {
      * @Creed: Talk is cheap,show me the code
      * @Date 2019/9/18 18:04
      */
+    @Auth
     @RequestMapping("getUserPage")
     public ResultJson getUserPage(@RequestBody Page<User> page){
         return ResultJson.success(userService.page(page));

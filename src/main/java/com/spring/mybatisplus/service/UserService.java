@@ -29,7 +29,7 @@ public class UserService extends ServiceImpl<UserMapper,User> {
         return userMapper.getByUsername(username);
     }
 
-    public List<User> getUserByPage(int offset, int pageSize){
+    public List<User> getUserByPage(long offset, long pageSize){
         return userMapper.getUserByPage(offset,pageSize);
     }
 

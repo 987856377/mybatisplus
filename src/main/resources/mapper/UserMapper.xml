@@ -17,7 +17,7 @@
             </where>
     </select>
 
-    <select id="getUserByPage" parameterType="Integer" resultMap="userMap">
+    <select id="getUserByPage" parameterType="long" resultMap="userMap">
         select * from user limit #{offset}, #{pageSize}
     </select>
 

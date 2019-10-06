@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @EnableTransactionManagement
 @Configuration
-@MapperScan(basePackages = {"com.spring.mybatisplus.mapper"})
+@MapperScan(basePackages = {"com.spring.mybatisplus.module.*.mapper"})
 public class MybatisPlusConfig {
     /*
      * 分页插件，自动识别数据库类型

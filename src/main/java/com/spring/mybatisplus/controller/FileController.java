@@ -1,4 +1,4 @@
-package com.spring.mybatisplus.controller;
+package com.spring.mybatisplus.module.user.controller;
 
 import com.spring.mybatisplus.common.ResultCode;
 import com.spring.mybatisplus.common.ResultJson;
@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * @Description
  * @Project mybatisplus
- * @Package com.spring.mybatisplus.controller
+ * @Package com.spring.mybatisplus.module.user.controller
  * @Author xuzhenkui
  * @Date 2019/9/19 9:33
  */

@@ -33,7 +33,7 @@ public class LogAspect {
     private ServletRequestAttributes attributes;
     private HttpServletRequest request;
 
-    @Pointcut("execution(public * com.spring.mybatisplus.controller.*.*(..))")
+    @Pointcut("execution(public * com.spring.mybatisplus.module.user.controller.*.*(..))")
     public void log(){}
 
     @Before(value = "log()")

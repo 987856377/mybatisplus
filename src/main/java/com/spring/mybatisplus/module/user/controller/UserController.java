@@ -1,11 +1,11 @@
-package com.spring.mybatisplus.controller;
+package com.spring.mybatisplus.module.user.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.spring.mybatisplus.annotation.Auth;
-import com.spring.mybatisplus.entity.User;
-import com.spring.mybatisplus.service.UserService;
+import com.spring.mybatisplus.module.user.entity.User;
+import com.spring.mybatisplus.module.user.service.UserService;
 import com.spring.mybatisplus.common.ResultCode;
 import com.spring.mybatisplus.common.ResultJson;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +18,7 @@ import java.io.Serializable;
 /**
  * @Description
  * @Project mybatisplus
- * @Package com.spring.mybatisplus.controller
+ * @Package com.spring.mybatisplus.module.user.controller
  * @Author xuzhenkui
  * @Date 2019/9/18 15:17
  */

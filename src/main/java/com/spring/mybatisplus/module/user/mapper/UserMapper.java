@@ -1,9 +1,9 @@
-package com.spring.mybatisplus.mapper;
+package com.spring.mybatisplus.module.user.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
-import com.spring.mybatisplus.entity.User;
+import com.spring.mybatisplus.module.user.entity.User;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

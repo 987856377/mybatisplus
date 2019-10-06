@@ -59,7 +59,6 @@ public class MyBatisGenerator {
         gc.setOpen(false);
         gc.setEnableCache(true);
         gc.setBaseResultMap(true);      // 设置返回类型映射
-        gc.setBaseColumnList(true);     // 设置生成的数据库字段和实体属性映射
         mpg.setGlobalConfig(gc);
 //        user_role sys
         // 数据源配置
@@ -75,7 +74,7 @@ public class MyBatisGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.spring.mybatisplus");
+        pc.setParent("com.spring.mybatisplus.module");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -133,14 +132,8 @@ public class MyBatisGenerator {
         strategy.setNaming(NamingStrategy.underline_to_camel);  // 数据库表映射到实体命名策略
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
         strategy.setSuperEntityClass("com.baomidou.mybatisplus.extension.activerecord.Model");
-        strategy.setSuperMapperClass("com.baomidou.mybatisplus.core.mapper.BaseMapper");
-        strategy.setSuperServiceClass("com.baomidou.mybatisplus.extension.service.impl.ServiceImpl");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        // 公共父类
-//        strategy.setSuperControllerClass("com.baomidou.ant.common.BaseController");
-        // 写于父类中的公共字段
-//        strategy.setSuperEntityColumns("id");
         strategy.setInclude(scanner("表名，多个英文逗号分割").split(",")); // 用于生成代码的数据库中的表
         strategy.setControllerMappingHyphenStyle(true);
 //        strategy.setTablePrefix(pc.getModuleName() + "_");    //设置数据库表名前缀, 通过这种方式找到数据库中具体的表

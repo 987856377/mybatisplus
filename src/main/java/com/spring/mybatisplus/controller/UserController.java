@@ -4,13 +4,12 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.spring.mybatisplus.annotation.Auth;
-import com.spring.mybatisplus.model.User;
+import com.spring.mybatisplus.entity.User;
 import com.spring.mybatisplus.service.UserService;
 import com.spring.mybatisplus.common.ResultCode;
 import com.spring.mybatisplus.common.ResultJson;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;

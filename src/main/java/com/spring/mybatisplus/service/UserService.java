@@ -3,7 +3,7 @@ package com.spring.mybatisplus.service;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.spring.mybatisplus.mapper.UserMapper;
-import com.spring.mybatisplus.model.User;
+import com.spring.mybatisplus.entity.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

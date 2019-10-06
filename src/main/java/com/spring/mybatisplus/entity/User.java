@@ -1,4 +1,4 @@
-package com.spring.mybatisplus.model;
+package com.spring.mybatisplus.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

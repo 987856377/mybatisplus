@@ -2,14 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f651692a-6c32-4296-91f5-8dcdb2eabd52" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/annotation/Auth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/aspect/AuthAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_generator_3_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/configuration/MyBatisGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserRoleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/model/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/service/UserRoleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/service/impl/UserRoleServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserRoleMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/spring/mybatisplus/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +86,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -132,7 +135,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MybatisplusApplication">
+  <component name="RunManager" selected="Application.MyBatisGenerator">
+    <configuration name="MyBatisGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.spring.mybatisplus.configuration.MyBatisGenerator" />
+      <module name="mybatisplus" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.spring.mybatisplus.configuration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserControllerTest.getUserByUsername" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mybatisplus" />
       <extension name="coverage">
@@ -158,6 +174,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyBatisGenerator" />
         <item itemvalue="JUnit.UserControllerTest.getUserByUsername" />
       </list>
     </recent_temporary>
@@ -364,6 +381,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <MESSAGE value="制定统一的返回格式信息和返回代码, 实现多文件上传下载" />
     <MESSAGE value="添加日志切面, 记录调用controller方法时的url, 入参, 出参, 执行时间" />

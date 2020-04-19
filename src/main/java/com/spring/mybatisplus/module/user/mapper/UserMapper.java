@@ -27,5 +27,7 @@ public interface UserMapper extends BaseMapper<User> {
 //    自定义SQL查询: 使用Wrapper
 //    @Select("select * from user ${ew.customSqlSegment}")
     public List<User> getByWrapper(@Param(Constants.WRAPPER)Wrapper wrapper);
+
+    public Long create(@Param("user") User user);
 }
 

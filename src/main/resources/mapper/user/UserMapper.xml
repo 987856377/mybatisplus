@@ -8,6 +8,9 @@
         <result column="password" property="password"/>
         <result column="age" property="age"/>
     </resultMap>
+    <insert id="create" parameterType="com.spring.mybatisplus.module.user.entity.User" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        insert into user(username,password,age) values  (#{user.username},#{user.password},#{user.age})
+    </insert>
     <select id="getByUsername" parameterType="String" resultMap="userMap">
         select * from user
             <where>

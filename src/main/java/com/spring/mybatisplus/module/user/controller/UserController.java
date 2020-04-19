@@ -27,6 +27,18 @@ public class UserController {
     @Resource
     private UserService userService;
 
+    @RequestMapping("createUser")
+    public ResultJson createUser(@RequestBody User user){
+        if (user==null){
+            return ResultJson.failure(ResultCode.NOT_ACCEPTABLE);
+        }
+        if (user.getId() == null){
+            userService.create(user);
+            return ResultJson.success(user.getId());
+        }
+        return ResultJson.success(userService.saveOrUpdate(user));
+    }
+
     /*/*
      * @Description 提交 json 格式的参数.
      * 不传id参数为新建,id自增; 传id参数为新建或修改, id数据不存在,则新建,反之则修改

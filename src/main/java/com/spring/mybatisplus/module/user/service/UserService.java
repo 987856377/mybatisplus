@@ -36,4 +36,8 @@ public class UserService extends ServiceImpl<UserMapper,User> {
     public List<User> getByWrapper(Wrapper wrapper){
         return userMapper.getByWrapper(wrapper);
     }
+
+    public Long create(User user){
+        return userMapper.create(user);
+    }
 }
